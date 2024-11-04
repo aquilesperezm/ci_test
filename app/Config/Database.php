@@ -24,13 +24,13 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    public array $default = [
+   /* public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
+        'username'     => 'root',
+        'password'     => 'root',
         'database'     => '',
-        'DBDriver'     => 'MySQLi',
+        'DBDriver'     => 'Mysqli',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 5432,
         'numberNative' => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
@@ -49,7 +49,7 @@ class Database extends Config
             'time'     => 'H:i:s',
         ],
     ];
-
+*/
     //    /**
     //     * Sample database connection for SQLite3.
     //     *
@@ -71,32 +71,32 @@ class Database extends Config
     //        ],
     //    ];
 
-    //    /**
-    //     * Sample database connection for Postgre.
-    //     *
-    //     * @var array<string, mixed>
-    //     */
-    //    public array $default = [
-    //        'DSN'        => '',
-    //        'hostname'   => 'localhost',
-    //        'username'   => 'root',
-    //        'password'   => 'root',
-    //        'database'   => 'ci4',
-    //        'schema'     => 'public',
-    //        'DBDriver'   => 'Postgre',
-    //        'DBPrefix'   => '',
-    //        'pConnect'   => false,
-    //        'DBDebug'    => true,
-    //        'charset'    => 'utf8',
-    //        'swapPre'    => '',
-    //        'failover'   => [],
-    //        'port'       => 5432,
-    //        'dateFormat' => [
-    //            'date'     => 'Y-m-d',
-    //            'datetime' => 'Y-m-d H:i:s',
-    //            'time'     => 'H:i:s',
-    //        ],
-    //    ];
+        /**
+         * Sample database connection for Postgre.
+         *
+         * @var array<string, mixed>
+          */
+        public array $default = [
+            'DSN'        => '',
+            'hostname'   => 'localhost',
+            'username'   => 'postgres',
+            'password'   => 'root',
+            'database'   => 'test_db',
+            'schema'     => 'public',
+            'DBDriver'   => 'Postgre',
+            'DBPrefix'   => '',
+            'pConnect'   => false,
+            'DBDebug'    => true,
+            'charset'    => 'utf8',
+             'swapPre'    => '',
+            'failover'   => [],
+            'port'       => 5432,
+            'dateFormat' => [
+                'date'     => 'Y-m-d',
+                'datetime' => 'Y-m-d H:i:s',
+                'time'     => 'H:i:s',
+            ],
+        ];
 
     //    /**
     //     * Sample database connection for SQLSRV.
