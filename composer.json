@@ -39,6 +39,16 @@
         "sort-packages": true
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "pre-update-cmd": [
+            "rmdir /S /Q public\\bootstrap\\",
+            "mkdir public\\bootstrap\\js",
+            "mkdir public\\bootstrap\\css"
+        ],
+        "post-update-cmd": [
+            "del /Q public\\bootstrap\\*",
+            "copy vendor\\twbs\\bootstrap\\dist\\js\\bootstrap.js public\\bootstrap\\js\\",
+            "copy vendor\\twbs\\bootstrap\\dist\\css\\bootstrap.css public\\bootstrap\\css\\"
+        ]
     }
 }

@@ -6,6 +6,10 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+.env
+build/
+tests/
+vendor/
 
 # OS X Thumbnails
 ._*

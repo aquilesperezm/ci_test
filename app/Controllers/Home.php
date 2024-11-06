@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use Config\Autoload;
 
 use Config\Database;
 
@@ -9,7 +10,10 @@ class Home extends BaseController
     public function index()//: string
     {
 
-       //return view('welcome_message');
+        $db = Database::connect();
+
+
+       return view('welcome_message');
     }
 }
 
